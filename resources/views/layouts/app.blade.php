@@ -77,7 +77,7 @@
                 <div class="col-lg-4">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="/home">home</a>
+                            <a href="{{ route('home')}}">home</a>
                         </li>
                         <li class="list-group-item">
                             <a href="{{ route('post.create')}}">create new post</a>
