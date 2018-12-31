@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Category;
 use App\Post;
+use Session;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
