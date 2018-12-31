@@ -12,7 +12,7 @@
                         </div>
                     @endif
 
-                    Welcome
+                    Welcome noob
                 </div>
             </div>
      
