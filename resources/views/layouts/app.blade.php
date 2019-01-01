@@ -85,14 +85,17 @@
                         </li>
                         <li class="list-group-item">
                             <a href="{{ route('posts')}}">All posts</a>
-                        </li>    
+                        </li>
+                        <li class="list-group-item">
+                                <a href="{{ route('posts.trashed')}}">All trashed posts</a>
+                        </li>
                         <li class="list-group-item">
                                 <a href="{{ route('category.create')}}">create new category</a>
                             </li>
                         <li class="list-group-item">
                             <a href="{{ route('post.create')}}">create new post</a>
                         </li>
-                    </ul>    
+                    </ul>
                 </div>
               @endif  
                 <div class="col-lg-8"> @yield('content')</div>
