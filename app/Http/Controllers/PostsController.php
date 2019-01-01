@@ -48,7 +48,8 @@ class PostsController extends Controller
             'title' => 'required|',
             'featured' => 'required|image',
             'content'  => 'required',
-            'category_id' => 'required'
+            'category_id' => 'required',
+        
         ]);
 
         $featured = $request->featured;
@@ -58,11 +59,12 @@ class PostsController extends Controller
             'title' => $request->title,
             'content' => $request->content,
             'featured' => 'uploads/posts/' . $featured_new_name,
-            'category_id' => $request->category_id
+            'category_id' => $request->category_id,
+            'slug' => str_slug($request->title)
         ]);
         Session::flash('success', 'you succesfully created a post');
 
-        dd($request->all());
+        return redirect()->back();
         
     }
 
