@@ -43,6 +43,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'uses' => 'PostsController@kill',
         'as'   => 'posts.kill'
     ]);
+    Route::get('/posts/restore/{id}', [
+        'uses' => 'PostsController@restore',
+        'as'   => 'posts.restore'
+    ]);
     Route::post('/post/store', [
         'uses' => 'PostsController@store',
         'as'   => 'post.store'
