@@ -11,7 +11,7 @@
 |
 */
 Route::get('/test', function () {
-    return App\Post::find(6)->tags;
+    return App\User::find(1)->profile;
 });
 
 Route::get('/', function () {
