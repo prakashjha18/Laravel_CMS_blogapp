@@ -1,98 +1,3 @@
-{{-- <!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/admin/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
-</html> --}}
 <!DOCTYPE html>
 <html lang="en">
 <head lang="en">
@@ -100,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Seosight - Index Page</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/fonts.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/crumina-fonts.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/normalize.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/grid.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="app/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="app/css/crumina-fonts.css">
+    <link rel="stylesheet" type="text/css" href="app/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="app/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="app/css/styles.css">
 
 
     <!--Plugins styles-->
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/jquery.mCustomScrollbar.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/swiper.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/primary-menu.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/magnific-popup.css') }}">
+    <link rel="stylesheet" type="text/css" href="app/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="app/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="app/css/primary-menu.css">
+    <link rel="stylesheet" type="text/css" href="app/css/magnific-popup.css">
 
     <!--Styles for RTL-->
 
-    <!--<link rel="stylesheet" type="text/css" href="{{ asset('app/css/rtl.css') }}">-->
+    <!--<link rel="stylesheet" type="text/css" href="app/css/rtl.css">-->
 
     <!--External fonts-->
 
@@ -137,7 +42,53 @@
 
 <div class="content-wrapper">
     
-    @include('includes.header')
+    <header class="header" id="site-header">
+        <div class="container">
+                <div class="header-content-wrapper">
+                    <div class="logo">
+                        <div class="logo-text">
+                            <div class="logo-title">LARAVEL'S BLOG</div>
+                        </div>
+                    </div>
+
+                    <nav id="primary-menu" class="primary-menu">
+                        <a href='javascript:void(0)' id="menu-icon-trigger" class="menu-icon-trigger showhide">
+                            <span id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: hidden">
+                                <svg width="1000px" height="1000px">
+                                    <path id="pathD" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                                    <path id="pathE" d="M 300 500 L 700 500"></path>
+                                    <path id="pathF" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="primary-menu-menu" style="overflow: hidden;">
+                            <li class="">
+                                <a href="">NEWS</a>
+                            </li>
+                            <li class="">
+                                <a href="">VIDEOS</a>
+                            </li>
+                            <li class="">
+                                <a href="">DISCUSSIONS</a>
+                            </li>
+                            <li class="">
+                                <a href="">TUTORIALS</a>
+                            </li>
+                            <li class="">
+                                <a href="">NEWSLETTER</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="nav-add">
+                        <li class="search search_main" style="color: black; margin-top: 5px;">
+                            <a href="#" class="js-open-search">
+                                <i class="seoicon-loupe"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </header>
 
     <div class="header-spacer"></div>
 
@@ -606,16 +557,16 @@
 
 <!-- JS Script -->
 
-<script src="{{ asset('app/js/jquery-2.1.4.min.js') }}"></script>
-<script src="{{ asset('app/js/crum-mega-menu.js') }}"></script>
-<script src="{{ asset('app/js/swiper.jquery.min.js') }}"></script>
-<script src="{{ asset('app/js/theme-plugins.js') }}"></script>
-<script src="{{ asset('app/js/main.js') }}"></script>
-<script src="{{ asset('app/js/form-actions.js') }}"></script>
+<script src="app/js/jquery-2.1.4.min.js"></script>
+<script src="app/js/crum-mega-menu.js"></script>
+<script src="app/js/swiper.jquery.min.js"></script>
+<script src="app/js/theme-plugins.js"></script>
+<script src="app/js/main.js"></script>
+<script src="app/js/form-actions.js"></script>
 
-<script src="{{ asset('app/js/velocity.min.js') }}"></script>
-<script src="{{ asset('app/js/ScrollMagic.min.js') }}"></script>
-<script src="{{ asset('app/js/animation.velocity.min.js') }}"></script>
+<script src="app/js/velocity.min.js"></script>
+<script src="app/js/ScrollMagic.min.js"></script>
+<script src="app/js/animation.velocity.min.js"></script>
 
 
 <!-- ...end JS Script -->
