@@ -34,7 +34,11 @@
                                {{$user->name}}
                            </td>
                            <td>
-                               permissions
+                               @if($user->admin)
+                                    <a href="{{route('user.not.admin',['id' => $user->id])}}" class="btn btn-xs btn-danger">remove permissions</a>
+                               @else
+                                    <a href="{{route('user.admin',['id' => $user->id])}}" class="btn btn-xs btn-success">make admin</a>
+                               @endif
                            </td>
                            <td>
                                delete
