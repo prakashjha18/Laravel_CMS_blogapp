@@ -11,7 +11,7 @@
     	</div>
     	
     	<div class="panel-body">
-		    <form action="{{ route('user.profile.update')}}" method="post" >
+		    <form action="{{ route('user.profile.update') }}" method="post" enctype="multipart/form-data">
     			{{ csrf_field() }}
 				<div class="form-group">
 				    <label for="name">Username</label>
@@ -39,11 +39,10 @@
                 </div>
                 <div class="form-group">
                     <label for="about">About you</label>
-                <textarea name="about" id="about" cols="6" rows="6" class="form-control">{{$user->profile->about}}</textarea>
+                <textarea name="about" id="about" cols="6" rows="6" class="form-control">{{$user->profile->about}}</textarea></div>
 				<div class="form-group">
-				     <div class="text-center">
-					     <button class="btn btn-success" type="submit">update profile</button>
-					 
+				    <div class="text-center">
+					    <button class="btn btn-success" type="submit">update profile</button>
 					</div>
 				</div>
     		</form>
