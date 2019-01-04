@@ -61,6 +61,7 @@ class PostsController extends Controller
             'title' => $request->title,
             'content' => $request->content,
             'featured' => 'uploads/posts/' . $featured_new_name,
+            'user_id' => auth()->user()->id,
             'category_id' => $request->category_id,
             'slug' => str_slug($request->title)
         ]);
@@ -123,6 +124,7 @@ class PostsController extends Controller
         }
         $post->title = $request->title;
         $post->content = $request->content;
+        $post->user_id = auth()->user()->id;
         $post->Category_id = $request->category_id;
         $post->save();
         $post->tags()->sync($request->tags);
