@@ -5,6 +5,8 @@ use App\Tag;
 use App\Category;
 use App\Post;
 use Session;
+use Auth;
+
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -57,14 +59,16 @@ class PostsController extends Controller
         $featured = $request->featured;
         $featured_new_name = time().$featured->getClientOriginalName();
         $featured->move('uploads/posts', $featured_new_name);
-        $post = Post::create([
-            'title' => $request->title,
-            'content' => $request->content,
-            'featured' => 'uploads/posts/' . $featured_new_name,
-            'user_id' => auth()->user()->id,
-            'category_id' => $request->category_id,
-            'slug' => str_slug($request->title)
-        ]);
+        $post = new Post;
+        $post->user_id = auth()->user()->id;
+        $post->title = $request->title;
+        $post->content =  $request->content;
+        $post->featured = 'uploads/posts/' . $featured_new_name;
+        $post->category_id = $request->category_id;
+        $post->slug = str_slug($request->title);
+        $post->save();
+        
+        
         $post->tags()->attach($request->tags);
         Session::flash('success', 'you succesfully created a post');
 
@@ -124,7 +128,7 @@ class PostsController extends Controller
         }
         $post->title = $request->title;
         $post->content = $request->content;
-        $post->user_id = auth()->user()->id;
+        
         $post->Category_id = $request->category_id;
         $post->save();
         $post->tags()->sync($request->tags);
