@@ -79,20 +79,23 @@
                 <div class="col-lg-4">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="{{ route('home')}}">home</a>
+                            <a href="{{ route('index')}}" target="_blank">Blogs</a>
                         </li>
                         <li class="list-group-item">
-                                <a href="{{ route('categories')}}">categories</a>
+                            <a href="{{ route('home')}}">Home</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="{{ route('tags')}}">tags</a>
+                                <a href="{{ route('categories')}}">Categories</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{{ route('tags')}}">Tags</a>
                         </li>
                         @if(Auth::user()->admin)
                         <li class="list-group-item">
-                            <a href="{{ route('users')}}">users</a>
+                            <a href="{{ route('users')}}">Users</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="{{ route('user.create')}}">new users</a>
+                            <a href="{{ route('user.create')}}">New users</a>
                         </li>
                         @endif
                         <li class="list-group-item">
@@ -108,10 +111,10 @@
                                 <a href="{{ route('posts.trashed')}}">All trashed posts</a>
                         </li>
                         <li class="list-group-item">
-                                <a  href="{{ route('category.create')}}">create new category</a>
+                                <a  href="{{ route('category.create')}}">Create new category</a>
                             </li>
                         <li class="list-group-item">
-                            <a href="{{ route('post.create')}}">create new post</a>
+                            <a href="{{ route('post.create')}}">Create new post</a>
                         </li>
                         @if(Auth::user()->admin)
                         <li class="list-group-item">

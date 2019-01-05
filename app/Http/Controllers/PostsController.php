@@ -72,7 +72,7 @@ class PostsController extends Controller
         $post->tags()->attach($request->tags);
         Session::flash('success', 'you succesfully created a post');
 
-        return redirect()->back();
+        return redirect()->route('index');
         
     }
 

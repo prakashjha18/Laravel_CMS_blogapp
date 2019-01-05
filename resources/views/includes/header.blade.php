@@ -3,7 +3,7 @@
                 <div class="header-content-wrapper">
                     <div class="logo">
                         <div class="logo-text">
-                            <div class="logo-title">{{$settings->site_name}}</div>
+                            <div class="logo-title"><a href="{{ route('index')}}">{{$settings->site_name}}</a></div>
                         </div>
                     </div>
 
@@ -22,7 +22,21 @@
                                 <li class="">
                                     <a href="{{route('category.single', ['id' => $category->id])}}">{{ $category->name }}</a>
                                 </li>
+                                
                             @endforeach
+                            @if (Route::has('login'))
+                                <li class="">
+                                    @if (Auth::check())
+                                        <a href="{{ url('/admin/dashboard') }}">Home</a>
+                                </li>        
+                                    @else
+                                    <li class="">
+                                        <a href="{{ url('/login') }}">Login</a></li>
+                                    <li class="">
+                                        <a href="{{ url('/register') }}">Register</a></li>
+                                    @endif
+                                </div>
+                            @endif
                         </ul>
                     </nav>
                     <ul class="nav-add">
