@@ -97,19 +97,13 @@
                                 </p>
                                 <div class="socials">
         
-                                    <a href="#" class="social__item">
-                                        <img src="{{ asset('app/svg/circle-facebook.svg') }}" alt="facebook">
+                                    <a href="{{$post->user->profile->facebook}}" class="social__item" target="_blank">
+                                        <img src="{{ asset('app/svg/circle-facebook.svg') }}" alt="facebook" >
                                     </a>
         
-                                    <a href="#" class="social__item">
-                                        <img src="{{ asset('app/svg/twitter.svg') }}" alt="twitter">
-                                    </a>
+                                    
         
-                                    <a href="#" class="social__item">
-                                        <img src="{{ asset('app/svg/google.svg') }}" alt="google">
-                                    </a>
-        
-                                    <a href="#" class="social__item">
+                                    <a href="{{$post->user->profile->youtube}}" class="social__item" target="_blank">
                                         <img src="{{ asset('app/svg/youtube.svg') }}" alt="youtube">
                                     </a>
         

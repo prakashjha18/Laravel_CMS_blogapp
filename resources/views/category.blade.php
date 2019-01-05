@@ -18,7 +18,7 @@
                                                 <div class="case-item__thumb mouseover poster-3d lightbox shadow animation-disabled" data-offset="5">
                                                     <img src="{{ $post->featured }}" alt="our case">
                                                 </div>
-                                                 <a href="{{route('post.single',['slug' => $post->slug]) }}<h6 class="case-item__title">{{$post->title}}</h6></a>
+                                                 <a href="{{route('post.single',['slug' => $post->slug]) }}"><h6 class="case-item__title">{{$post->title}}</h6></a>
                                             </div>
                                         </div>
                                     @endforeach
